@@ -14,7 +14,7 @@ const Regiao = (props) => {
                 {props.peixes.map(peixe => <Peixe 
                     key={peixe.nome} 
                     nome={peixe.nome} 
-                    cargo={peixe.cargo} 
+                    tamanho={peixe.tamanho} 
                     imagem={peixe.imagem}
                     corFundo={props.corPrimaria}
                 />)}

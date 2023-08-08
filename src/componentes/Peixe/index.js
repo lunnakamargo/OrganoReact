@@ -1,6 +1,6 @@
 import './Peixe.css'
 
-const Peixe = ({nome, imagem, cargo, corFundo}) => {
+const Peixe = ({nome, imagem, tamanho, corFundo}) => {
 
     const primaria = {backgroundColor: corFundo}
 
@@ -11,7 +11,7 @@ const Peixe = ({nome, imagem, cargo, corFundo}) => {
             </div>
             <div className='rodape'>
                 <h4>{nome}</h4>
-                <h5>{cargo}</h5>
+                <h5>{tamanho}</h5>
             </div>
         </div>
     )

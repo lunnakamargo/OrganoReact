@@ -8,22 +8,22 @@ function Formulario(props) {
 
 
     const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
+    const [tamanho, setTamanho] = useState('')
     const [imagem, setImagem] = useState('')
-    const [regiao, setTime] = useState('')
+    const [regiao, setRegiao] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoColaboradorCadastrado ({
             nome,
-            cargo,
+            tamanho,
             imagem,
             regiao
         })
         setNome('')
-        setCargo('')
+        setTamanho('')
         setImagem('')
-        setTime('')
+        setRegiao('')
     }
         
 
@@ -42,8 +42,8 @@ function Formulario(props) {
                     obrigatorio={true} 
                     label="Tamanho" 
                     placeholder="Digite o tamanho do peixe"
-                    valor={cargo}
-                    aoAlterado={valor => setCargo(valor)}
+                    valor={tamanho}
+                    aoAlterado={valor => setTamanho(valor)}
                 />
                 <CampoTexto 
                     obrigatorio={true}
@@ -57,7 +57,7 @@ function Formulario(props) {
                     label="Região" 
                     itens={props.regioes} 
                     valor={regiao}
-                    aoAlterado={valor => setTime(valor)}
+                    aoAlterado={valor => setRegiao(valor)}
                 />
                 <Botao>
                     Criar Card
