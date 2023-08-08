@@ -30,22 +30,23 @@ function Formulario(props) {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card abaixo</h2>
+                <h2>Preencha com os dados do peixe para criar o card abaixo</h2>
                 <CampoTexto 
                     obrigatorio={true} 
                     label="Nome" 
-                    placeholder="Digite seu nome"
+                    placeholder="Digite o nome"
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
                 <CampoTexto 
                     obrigatorio={true} 
-                    label="Cargo" 
-                    placeholder="Digite seu cargo"
+                    label="Tamanho" 
+                    placeholder="Digite o tamanho do peixe"
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
                 <CampoTexto 
+                    obrigatorio={true}
                     label="Imagem" 
                     placeholder="Digite o endereço da imagem"
                     valor={imagem}
@@ -53,7 +54,7 @@ function Formulario(props) {
                 />                
                 <ListaSuspensa 
                     obrigatorio={true} 
-                    label="Time" 
+                    label="Região" 
                     itens={props.times} 
                     valor={time}
                     aoAlterado={valor => setTime(valor)}

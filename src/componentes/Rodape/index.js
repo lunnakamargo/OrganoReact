@@ -5,17 +5,17 @@ const Rodape = () => {
         <section>
             <ul>
                 <li>
-                    <a href="facebook.com" target="_blank">
-                        <img src="/imagens/fb.png" alt="" />
+                    <a href="https://github.com/LunnaC" target="_blank">
+                        <img src="/imagens/github-logo.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="twitter.com" target="_blank">
-                        <img src="/imagens/tw.png" alt="" />
+                    <a href="https://pt.wikipedia.org/wiki/Pesca" target="_blank">
+                        <img src="/imagens/fish.png" alt="" />
                     </a>
                 </li>
                 <li>
-                    <a href="instagram.com" target="_blank">
+                    <a href="https://www.instagram.com/lunnakamargo/" target="_blank">
                         <img src="/imagens/ig.png" alt="" />
                     </a>
                 </li>
@@ -26,7 +26,7 @@ const Rodape = () => {
         </section>
         <section>
             <p>
-                Desenvolvido por Alura.
+                Desenvolvido por Lunna Camargo.
             </p>
         </section>
     </footer>)

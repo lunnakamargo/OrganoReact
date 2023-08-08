@@ -4,7 +4,7 @@ function Banner() {
     // JSX
     return (
         <header className="banner">
-            <img src="/imagens/banner.png" alt="banner principal da pagina" />
+            <img src="/imagens/banner-pesca.png" alt="banner principal da pagina" />
         </header>
     )
 
