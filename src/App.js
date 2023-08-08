@@ -59,24 +59,24 @@ function App() {
     },
   ]
 
-  const [colaboradores, setColaboradores] = useState ([])
+  const [peixes, setColaboradores] = useState ([])
 
-  const aoNovocolaboradorAdicionado = (colaborador) => {
-    setColaboradores([...colaboradores, colaborador])
+  const aoNovocolaboradorAdicionado = (peixe) => {
+    setColaboradores([...peixes, peixe])
 
   }
 
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovocolaboradorAdicionado(colaborador)}/>
+      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={peixe => aoNovocolaboradorAdicionado(peixe)}/>
 
       {times.map(time => <Time 
         key={time.nome} 
         nome={time.nome} 
         corPrimaria={time.corPrimaria} 
         corSecundaria={time.corSecundaria} 
-        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        peixes={peixes.filter(peixe => peixe.time === time.nome)}
       />)}
       <Rodape/>
     </div>

@@ -1,11 +1,11 @@
-import './Colaborador.css'
+import './Peixe.css'
 
-const Colaborador = ({nome, imagem, cargo, corFundo}) => {
+const Peixe = ({nome, imagem, cargo, corFundo}) => {
 
     const primaria = {backgroundColor: corFundo}
 
     return (
-        <div className='colaborador'>
+        <div className='peixe'>
             <div className='cabecalho' style={primaria}>
                 <img src={imagem} alt={nome}/>
             </div>
@@ -18,4 +18,4 @@ const Colaborador = ({nome, imagem, cargo, corFundo}) => {
 
 }
 
-export default Colaborador
+export default Peixe

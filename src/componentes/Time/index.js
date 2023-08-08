@@ -1,4 +1,4 @@
-import Colaborador from '../Colaborador'
+import Peixe from '../Peixe'
 import './Time.css'
 
 const Time = (props) => {
@@ -7,15 +7,15 @@ const Time = (props) => {
 
 
     return (
-        (props.colaboradores.length > 0) ? 
+        (props.peixes.length > 0) ? 
         <section className='time' style={secundaria} >
             <h3 style={primaria}>{props.nome}</h3>
-            <div className='colaboradores'>
-                {props.colaboradores.map(colaborador => <Colaborador 
-                    key={colaborador.nome} 
-                    nome={colaborador.nome} 
-                    cargo={colaborador.cargo} 
-                    imagem={colaborador.imagem}
+            <div className='peixes'>
+                {props.peixes.map(peixe => <Peixe 
+                    key={peixe.nome} 
+                    nome={peixe.nome} 
+                    cargo={peixe.cargo} 
+                    imagem={peixe.imagem}
                     corFundo={props.corPrimaria}
                 />)}
             </div>

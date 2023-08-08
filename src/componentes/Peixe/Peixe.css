@@ -1,11 +1,11 @@
-.colaborador {
+.peixe {
     width: 280px;
 }
 
-.colaborador .cabecalho {
+.peixe .cabecalho {
     border-radius: 10px 10px 0px 0px;
 }
-.colaborador img {
+.peixe img {
     width: 100px;
     border-radius: 50%;
     position: relative;
@@ -13,7 +13,7 @@
     height: 100px;
 }
 
-.colaborador .rodape {
+.peixe .rodape {
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
@@ -21,7 +21,7 @@
     padding-bottom: 40px;
 }
 
-.colaborador .rodape h4 {
+.peixe .rodape h4 {
     color: #6278F7;
     font-size: 18px;
     line-height: 22px;
@@ -29,7 +29,7 @@
     margin-bottom: 8px;
 }
 
-.colaborador .rodape h5 {
+.peixe .rodape h5 {
     font-size: 18px;
     line-height: 22px;
     color: #212121;
