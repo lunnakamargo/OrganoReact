@@ -1,14 +1,14 @@
 import Peixe from '../Peixe'
-import './Time.css'
+import './Regiao.css'
 
-const Time = (props) => {
+const Regiao = (props) => {
     const primaria = {borderColor: props.corPrimaria}
     const secundaria = {backgroundColor: props.corSecundaria}
 
 
     return (
         (props.peixes.length > 0) ? 
-        <section className='time' style={secundaria} >
+        <section className='regiao' style={secundaria} >
             <h3 style={primaria}>{props.nome}</h3>
             <div className='peixes'>
                 {props.peixes.map(peixe => <Peixe 
@@ -24,4 +24,4 @@ const Time = (props) => {
     )
 }
 
-export default Time
+export default Regiao

@@ -10,7 +10,7 @@ function Formulario(props) {
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [regiao, setTime] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -18,7 +18,7 @@ function Formulario(props) {
             nome,
             cargo,
             imagem,
-            time
+            regiao
         })
         setNome('')
         setCargo('')
@@ -55,8 +55,8 @@ function Formulario(props) {
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Região" 
-                    itens={props.times} 
-                    valor={time}
+                    itens={props.regioes} 
+                    valor={regiao}
                     aoAlterado={valor => setTime(valor)}
                 />
                 <Botao>

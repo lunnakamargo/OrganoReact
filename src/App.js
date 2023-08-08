@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
-import Time from './componentes/Time';
+import Regiao from './componentes/Regiao';
 import Rodape from './componentes/Rodape';
 
 function App() {
 
-  const times = [
+  const regioes = [
     {
       nome: 'Sul - Água Doce',
       corPrimaria: '#57c278',
@@ -69,14 +69,14 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={peixe => aoNovocolaboradorAdicionado(peixe)}/>
+      <Formulario regioes={regioes.map(regiao => regiao.nome)} aoColaboradorCadastrado={peixe => aoNovocolaboradorAdicionado(peixe)}/>
 
-      {times.map(time => <Time 
-        key={time.nome} 
-        nome={time.nome} 
-        corPrimaria={time.corPrimaria} 
-        corSecundaria={time.corSecundaria} 
-        peixes={peixes.filter(peixe => peixe.time === time.nome)}
+      {regioes.map(regiao => <Regiao 
+        key={regiao.nome} 
+        nome={regiao.nome} 
+        corPrimaria={regiao.corPrimaria} 
+        corSecundaria={regiao.corSecundaria} 
+        peixes={peixes.filter(peixe => peixe.regiao === regiao.nome)}
       />)}
       <Rodape/>
     </div>
