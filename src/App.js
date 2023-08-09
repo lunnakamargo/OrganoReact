@@ -1,85 +1,214 @@
-import React, { useState, useEffect } from 'react';
-import Banner from './componentes/Banner';
-import Formulario from './componentes/Formulario';
-import Regiao from './componentes/Regiao';
-import Rodape from './componentes/Rodape';
-
+import { useState } from "react";
+import Banner from "./componentes/Banner";
+import Formulario from "./componentes/Formulario";
+import Rodape from "./componentes/Rodape";
+import Time from "./componentes/Time";
 
 function App() {
 
-  const regioes = [
+  const times = [
     {
-        nome: 'Sul',
-        corPrimariaAguaDoce: '#57c278',
-        corSecundariaAguaDoce: '#d9f7e9',
-        corPrimariaAguaSalgada: '#009479',
-        corSecundariaAguaSalgada: 'rgb(0 148 121 / 20%)',
+      nome: 'Programação',
+      corPrimaria: '#D9F7E9',
+      corSecundaria: '#57C278'
     },
     {
-        nome: 'Sudeste',
-        corPrimariaAguaDoce: '#008BBE',
-        corSecundariaAguaDoce: 'rgb(0 139 190 / 20%)',
-        corPrimariaAguaSalgada: '#4272C2',
-        corSecundariaAguaSalgada: 'rgb(65 112 191 / 20%)',
+      nome: 'Front-End',
+      corPrimaria: '#E8F8FF',
+      corSecundaria: '#82CFFA'
     },
     {
-        nome: 'Centro-Oeste',
-        corPrimariaAguaDoce: '#7F63AD',
-        corSecundariaAguaDoce: 'rgb(126 98 172 / 20%)',
-        corPrimariaAguaSalgada: '#C769A9',
-        corSecundariaAguaSalgada: 'rgb(199 105 169 / 20%)',
+      nome: 'Data Science',
+      corPrimaria: '#F0F8E2',
+      corSecundaria: '#A6D157'
     },
     {
-        nome: 'Norte',
-        corPrimariaAguaDoce: '#FB7994',
-        corSecundariaAguaDoce: 'rgb(247 119 146 / 20%)',
-        corPrimariaAguaSalgada: '#FF9A78',
-        corSecundariaAguaSalgada: 'rgb(254 153 120 / 20%)',
+      nome: 'Devops',
+      corPrimaria: '#FDE7E8',
+      corSecundaria: '#E06B69'
     },
     {
-        nome: 'Nordeste',
-        corPrimariaAguaDoce: '#FFC865',
-        corSecundariaAguaDoce: 'rgb(253 198 100 / 20%)',
-        corPrimariaAguaSalgada: '#F9F871',
-        corSecundariaAguaSalgada: 'rgb(248 247 113 / 20%)',
+      nome: 'UX e Design',
+      corPrimaria: '#FAE9F5',
+      corSecundaria: '#DB6EBF'
     },
-];
+    {
+      nome: 'Mobile',
+      corPrimaria: '#FFF5D9',
+      corSecundaria: '#FFBA05'
+    },
+    {
+      nome: 'Inovação e Gestão',
+      corPrimaria: '#FFEEDF',
+      corSecundaria: '#FF8A29'
+    },
+  ]
 
-const tiposAgua = ['Água Doce', 'Água Salgada'];
+  const inicial = [
+    {
+      nome: 'JULIANA AMOASEI',
+      cargo: 'Desenvolvedora de software e instrutora',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      time: times[0].nome
+    },
+    {
+      nome: 'DANIEL ARTINE',
+      cargo: 'Engenheiro de Software na Stone Age',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      time: times[0].nome
+    },
+    {
+      nome: 'GUILHERME LIMA',
+      cargo: 'Desenvolvedor Python e JavaScript na Alura',
+      imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      time: times[0].nome
+    },
+    {
+      nome: 'PAULO SILVEIRA',
+      cargo: 'Hipster e CEO da Alura',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      time: times[0].nome
+    },
+    {
+      nome: 'JULIANA AMOASEI',
+      cargo: 'Desenvolvedora de software e instrutora',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      time: times[1].nome
+    },
+    {
+      nome: 'DANIEL ARTINE',
+      cargo: 'Engenheiro de Software na Stone Age',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      time: times[1].nome
+    },
+    {
+      nome: 'GUILHERME LIMA',
+      cargo: 'Desenvolvedor Python e JavaScript na Alura',
+      imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      time: times[1].nome
+    },
+    {
+      nome: 'PAULO SILVEIRA',
+      cargo: 'Hipster e CEO da Alura',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      time: times[1].nome
+    },
+    {
+      nome: 'JULIANA AMOASEI',
+      cargo: 'Desenvolvedora de software e instrutora',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      time: times[2].nome
+    },
+    {
+      nome: 'DANIEL ARTINE',
+      cargo: 'Engenheiro de Software na Stone Age',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      time: times[2].nome
+    },
+    {
+      nome: 'GUILHERME LIMA',
+      cargo: 'Desenvolvedor Python e JavaScript na Alura',
+      imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      time: times[2].nome
+    },
+    {
+      nome: 'PAULO SILVEIRA',
+      cargo: 'Hipster e CEO da Alura',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      time: times[2].nome
+    },
+    {
+      nome: 'JULIANA AMOASEI',
+      cargo: 'Desenvolvedora de software e instrutora',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      time: times[3].nome
+    },
+    {
+      nome: 'DANIEL ARTINE',
+      cargo: 'Engenheiro de Software na Stone Age',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      time: times[3].nome
+    },
+    {
+      nome: 'GUILHERME LIMA',
+      cargo: 'Desenvolvedor Python e JavaScript na Alura',
+      imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      time: times[3].nome
+    },
+    {
+      nome: 'PAULO SILVEIRA',
+      cargo: 'Hipster e CEO da Alura',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      time: times[3].nome
+    },
+    {
+      nome: 'JULIANA AMOASEI',
+      cargo: 'Desenvolvedora de software e instrutora',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      time: times[4].nome
+    },
+    {
+      nome: 'DANIEL ARTINE',
+      cargo: 'Engenheiro de Software na Stone Age',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      time: times[4].nome
+    },
+    {
+      nome: 'GUILHERME LIMA',
+      cargo: 'Desenvolvedor Python e JavaScript na Alura',
+      imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      time: times[4].nome
+    },
+    {
+      nome: 'PAULO SILVEIRA',
+      cargo: 'Hipster e CEO da Alura',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      time: times[4].nome
+    },
+    {
+      nome: 'JULIANA AMOASEI',
+      cargo: 'Desenvolvedora de software e instrutora',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      time: times[5].nome
+    },
+    {
+      nome: 'DANIEL ARTINE',
+      cargo: 'Engenheiro de Software na Stone Age',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      time: times[5].nome
+    },
+    {
+      nome: 'GUILHERME LIMA',
+      cargo: 'Desenvolvedor Python e JavaScript na Alura',
+      imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      time: times[5].nome
+    },
+    {
+      nome: 'PAULO SILVEIRA',
+      cargo: 'Hipster e CEO da Alura',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      time: times[5].nome
+    },
+  ]
 
-const [peixes, setPeixes] = useState([]);
+  const [colaboradores, setColaboradores] = useState(inicial)
 
-const aoNovoPeixeAdicionado = (peixe) => {
-    setPeixes([...peixes, peixe]);
-};
+  function deletarColaborador() {
+    console.log('deletando colaborador');
+  }
 
-return (
-    <div className="App">
-        <Banner />
-        <Formulario
-            regioes={regioes.map(regiao => regiao.nome)}
-            tiposAgua={tiposAgua}
-            aoPeixeCadastrado={peixe => aoNovoPeixeAdicionado(peixe)}
-        />
-        {regioes.map(regiao => (
-            <React.Fragment key={regiao.nome}>
-                <Regiao
-                    nome={`${regiao.nome} - Água Doce`}
-                    corPrimaria={regiao.corPrimariaAguaDoce}
-                    corSecundaria={regiao.corSecundariaAguaDoce}
-                    peixes={peixes.filter(peixe => peixe.regiao === regiao.nome && peixe.tipo === 'Água Doce')}
-                />
-                <Regiao
-                    nome={`${regiao.nome} - Água Salgada`}
-                    corPrimaria={regiao.corPrimariaAguaSalgada}
-                    corSecundaria={regiao.corSecundariaAguaSalgada}
-                    peixes={peixes.filter(peixe => peixe.regiao === regiao.nome && peixe.tipo === 'Água Salgada')}
-                />
-            </React.Fragment>
-        ))}
-        <Rodape />
+
+  return (
+    <div>
+      <Banner />
+      <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+      <section className="times">
+        <h1>Minha organização</h1>
+        {times.map((time, indice) => <Time key={indice} time={time} colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)} aoDeletar={deletarColaborador} />)}
+      </section>
+      <Rodape />
     </div>
-);
+  );
 }
 
 export default App;
