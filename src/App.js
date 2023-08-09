@@ -59,7 +59,7 @@ return (
         <Formulario
             regioes={regioes.map(regiao => regiao.nome)}
             tiposAgua={tiposAgua}
-            aoColaboradorCadastrado={peixe => aoNovoPeixeAdicionado(peixe)}
+            aoPeixeCadastrado={peixe => aoNovoPeixeAdicionado(peixe)}
         />
         {regioes.map(regiao => (
             <React.Fragment key={regiao.nome}>

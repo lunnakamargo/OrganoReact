@@ -18,7 +18,7 @@ function Formulario(props) {
     const aoSalvar = (evento) => {
         evento.preventDefault()
         const calculatedTipo = regiao.includes('Salgada') ? 'Água Salgada' : 'Água Doce';
-        props.aoColaboradorCadastrado({
+        props.aoPeixeCadastrado({
             nome,
             tamanho,
             imagem,
