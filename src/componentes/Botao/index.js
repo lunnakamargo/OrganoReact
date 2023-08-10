@@ -1,8 +1,8 @@
 import './botao.css'
 
-const Botao = ({texto}) => {
-    return <button className="botao">
-        {texto}
+const Botao = ({type = 'text', onClick, className}) => {
+    return <button className={`botao ${className}`} onClick={onClick}>
+        {type}
     </button>
 }
 
