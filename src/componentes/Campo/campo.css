@@ -11,7 +11,6 @@
 .campo input {
     background: #FFFFFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-    border-radius: 0px;
     width: 100%;
     border: none;
     font-size: 24px;
@@ -21,12 +20,6 @@
 }
 
 .campo-color input {
-    padding: 5px 24px;
+    padding: 0px 0px;
     height: 60px;
-    background: none;
-    box-shadow: none;
-    border-radius: 30px;
-    margin-left: -25px;
-    width: 20%;
-
 }
