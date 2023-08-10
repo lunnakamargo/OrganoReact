@@ -1,4 +1,4 @@
-import './botao.css'
+import './Botao.css'
 
 const Botao = ({type = 'text', onClick, className}) => {
     return <button className={`botao ${className}`} onClick={onClick}>

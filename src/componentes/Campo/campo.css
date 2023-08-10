@@ -17,9 +17,16 @@
     font-size: 24px;
     padding: 24px;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 
 .campo-color input {
     padding: 5px 24px;
-    height: 40px;
+    height: 60px;
+    background: none;
+    box-shadow: none;
+    border-radius: 30px;
+    margin-left: -25px;
+    width: 20%;
+
 }
